@@ -4,22 +4,27 @@ import './Navbar.css';
 
 const Navbar = () =>
 {
-  const [isDropDownOpen, setisDropDownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleDropDown = () => {
-    setisDropDownOpen(!isDropDownOpen);
+  const toggleMenu = () =>{
+    setIsMenuOpen(!isMenuOpen);
   }
 
   return(
     <nav className = "navbar">
       <h1>FinBuddy</h1>
-      <div className="Links">
-        <Link to="/">Home</Link>
+      <div className={`ham-menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div className={`Links ${isMenuOpen ? "open" : ""}`}>
+        <Link to="/" onClick={toggleMenu}>Home</Link>
         <div className="dropdown">
           <button className="dropbtn">Expenses</button>
           <div className="dropdown-content">
-            <Link to="/add-expense">Add Expense</Link>
-            <Link to="/expense-list">Check Expenses</Link>
+            <Link to="/add-expense" onClick={toggleMenu}>Add Expense</Link>
+            <Link to="/expense-list" onClick={toggleMenu}>Check Expenses</Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,84 @@
+body{
+    overflow: hidden;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #4ca1af, #c4e0e5);
+    background-size: auto;
+}
+.HeroSectionFlexContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.LeftFlexItem{
+    flex: 1;
+    padding: 20px;
+    min-width: 300px;
+}
+.LeftFlexItem h1, .LeftFlexItem h3{
+    color: black;
+}
+.buttonContainer{
+    margin-top: 20px;
+}
+.homeButton{
+    display: inline-block;
+    background-color: blue; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    text-decoration: none; 
+    border-radius: 3px; 
+    font-size: 18px; 
+    transition: background-color 0.3s ease;
+}
+.homeButton:hover{
+    background-color: darkblue; 
+}
+.RightFlexItem{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+}
+.gif-image{
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px)
+{    
+    .HeroSectionFlexContainer{
+      flex-direction: column;
+      align-items: center;
+    }
+    .LeftFlexItem, .RightFlexItem{
+      padding: 10px;
+      min-width: 100%; 
+    }
+}
+@media (max-width: 480px)
+{
+    .home{
+      padding: 10px;
+    }
+    .HeroSectionFlexContainer{
+      padding: 10px;
+    }
+    .LeftFlexItem h1{
+      font-size: 24px;
+    }
+    .LeftFlexItem h3{
+      font-size: 18px;
+    }
+}

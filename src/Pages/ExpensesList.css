@@ -1,5 +1,8 @@
 .ExpensesList {
-    margin-top: 20px;
+    padding-top: 20px;
+    background: linear-gradient(to bottom right, #4ca1af, #c4e0e5);
+    height: 100vh;
+    top: 0;
 }
 .filter {
     margin-bottom: 20px;
@@ -38,17 +41,6 @@
 .expenses-table tr:hover{
     background-color: #ddd;
 }
-button{
-    padding: 5px 10px;
-    color: white;
-    background-color: red;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-button:hover{
-    background-color: darkred;
-}
 .total-row{
     font-weight: bold;
     border-color: white;
@@ -57,4 +49,27 @@ button:hover{
 .total-row td{
     border-color: white;
     background-color: white;
+}
+.SaveButton, .EditButton{
+    padding: 5px 10px;
+    margin: 1px 3px 1px 3px;
+    color: white;
+    background-color: rgb(12, 12, 173);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.SaveButton:hover, .EditButton:hover{
+    background-color: rgb(1, 1, 81);
+}
+.CancelButton, .DeleteButton{
+    padding: 5px 10px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.CancelButton:hover, .DeleteButton:hover{
+    background-color: darkred;
 }
